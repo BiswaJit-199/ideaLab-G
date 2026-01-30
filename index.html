@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>IdeaLab | GIFT</title>
+	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	<style type="text/tailwindcss">
+		.filter-btn {
+    @apply rounded-full border border-slate-300 px-5 py-2 text-sm font-medium text-slate-700 transition hover:bg-blue-900 hover:text-white;
+  }
+  .filter-btn.active {
+    @apply bg-blue-900 text-white border-blue-900;
+  }
+  .project-card {
+    @apply overflow-hidden rounded-2xl bg-white shadow hover:shadow-xl transition;
+  }
+	</style>
+</head>
+
+<body>
+	<header id="site-header" class="sticky top-0 z-50 bg-white transition-all duration-300">
+		<nav class="max-w-7xl mx-auto px-6">
+			<div class="flex h-20 items-center justify-between transition-all duration-300" id="navbar">
+
+				<!-- Logo -->
+				<div class="flex items-center gap-3">
+					<img src="assets/idealab-logo.png" alt="AICTE IDEA Lab Logo" class="h-11 w-11 object-contain" />
+					<div class="leading-tight">
+						<p class="text-lg font-semibold text-blue-900">IDEA Lab</p>
+						<p class="text-sm text-slate-500">Your Institute Name</p>
+					</div>
+				</div>
+
+				<!-- Desktop Menu -->
+				<ul class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-700">
+					<li><a href="#home" class="hover:text-blue-700">Home</a></li>
+					<li><a href="#about" class="hover:text-blue-700">About</a></li>
+					<li><a href="#facilities" class="hover:text-blue-700">Facilities</a></li>
+					<li><a href="#programs" class="hover:text-blue-700">Programs</a></li>
+					<li><a href="#projects" class="hover:text-blue-700">Projects</a></li>
+					<li><a href="#contact" class="hover:text-blue-700">Contact</a></li>
+				</ul>
+
+				<!-- CTA -->
+				<div class="hidden lg:block">
+					<a href="#apply"
+						class="rounded-full bg-blue-900 px-6 py-3 text-sm font-semibold text-white hover:bg-blue-800 transition">
+						Apply Now
+					</a>
+				</div>
+
+				<!-- Mobile Menu Button -->
+				<button id="menu-btn"
+					class="lg:hidden inline-flex items-center justify-center rounded-md p-2 text-slate-700 hover:bg-slate-100"
+					aria-label="Open Menu">
+					☰
+				</button>
+			</div>
+		</nav>
+
+		<!-- Mobile Menu -->
+		<div id="mobile-menu" class="hidden lg:hidden bg-white border-t">
+			<ul class="flex flex-col px-6 py-4 space-y-4 text-sm font-medium text-slate-700">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#facilities">Facilities</a></li>
+				<li><a href="#programs">Programs</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#contact">Contact</a></li>
+				<li>
+					<a href="#apply" class="block text-center rounded-full bg-blue-900 py-3 text-white font-semibold">
+						Apply Now
+					</a>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<main>
+		<section id="home" class="relative overflow-hidden bg-gradient-to-br from-blue-900 to-blue-700">
+			<div class="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
+
+				<!-- Content -->
+				<div class="text-white">
+					<span class="inline-block mb-4 rounded-full bg-white/10 px-4 py-1 text-sm">
+						AICTE Approved IDEA Lab
+					</span>
+
+					<h1 class="text-4xl lg:text-6xl font-bold leading-tight">
+						Building India’s <br />
+						Next Generation of Innovators
+					</h1>
+
+					<p class="mt-6 text-lg text-blue-100 max-w-xl">
+						A national innovation ecosystem empowering students to ideate,
+						prototype, and transform ideas into real-world solutions.
+					</p>
+
+					<div class="mt-8 flex flex-wrap gap-4">
+						<a href="#apply"
+							class="rounded-full bg-white px-8 py-4 text-blue-900 font-semibold hover:bg-blue-100 transition">
+							Apply to IDEA Lab
+						</a>
+						<a href="#facilities"
+							class="rounded-full border border-white/40 px-8 py-4 text-white hover:bg-white/10 transition">
+							Explore Facilities
+						</a>
+					</div>
+				</div>
+
+				<!-- Visual -->
+				<div class="relative">
+					<img src="assets/hero-innovation.png" alt="Students working in IDEA Lab"
+						class="rounded-2xl shadow-2xl" />
+
+					<!-- Floating Stats -->
+					<div class="absolute -bottom-8 -left-8 bg-white rounded-xl shadow-lg px-6 py-4">
+						<p class="text-2xl font-bold text-blue-900">25+</p>
+						<p class="text-sm text-slate-500">Prototypes Built</p>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<section class="bg-slate-50 border-y">
+			<div class="max-w-7xl mx-auto px-6 py-10">
+				<div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center opacity-80">
+
+					<img src="assets/aicte-logo.png" alt="AICTE Logo" class="h-12" />
+					<img src="assets/govt-india-logo.png" alt="Government of India" class="h-12" />
+					<img src="assets/startup-india-logo.png" alt="Startup India" class="h-12" />
+					<img src="assets/naac-logo.png" alt="NAAC Accreditation" class="h-12" />
+
+				</div>
+			</div>
+		</section>
+		<section id="about" class="bg-white py-24">
+			<div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+
+				<!-- Illustration / Visual -->
+				<div>
+					<img src="assets/idea-lab-process.png" alt="IDEA Lab Innovation Process"
+						class="rounded-2xl shadow-lg" />
+				</div>
+
+				<!-- Content -->
+				<div>
+					<h2 class="text-3xl lg:text-4xl font-bold text-slate-900">
+						What is an IDEA Lab?
+					</h2>
+
+					<p class="mt-6 text-lg text-slate-600 max-w-xl">
+						An AICTE-recognized IDEA Lab is a multidisciplinary innovation space
+						where students transform ideas into impactful solutions through
+						hands-on learning, prototyping, and real-world application.
+					</p>
+
+					<!-- 3 Pillars -->
+					<div class="mt-10 grid gap-6">
+
+						<!-- Pillar 1 -->
+						<div class="flex gap-4 items-start">
+							<div
+								class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-blue-900 font-bold">
+								01
+							</div>
+							<div>
+								<h3 class="text-lg font-semibold text-slate-900">Ideation</h3>
+								<p class="text-slate-600">
+									Identify real-world problems using design thinking and creativity.
+								</p>
+							</div>
+						</div>
+
+						<!-- Pillar 2 -->
+						<div class="flex gap-4 items-start">
+							<div
+								class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-blue-900 font-bold">
+								02
+							</div>
+							<div>
+								<h3 class="text-lg font-semibold text-slate-900">Prototyping</h3>
+								<p class="text-slate-600">
+									Convert ideas into functional prototypes using advanced tools.
+								</p>
+							</div>
+						</div>
+
+						<!-- Pillar 3 -->
+						<div class="flex gap-4 items-start">
+							<div
+								class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-blue-900 font-bold">
+								03
+							</div>
+							<div>
+								<h3 class="text-lg font-semibold text-slate-900">Application</h3>
+								<p class="text-slate-600">
+									Scale innovations into startups, patents, and deployable solutions.
+								</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<section id="facilities" class="bg-slate-50 py-24">
+			<div class="max-w-7xl mx-auto px-6">
+
+				<!-- Section Header -->
+				<div class="max-w-2xl">
+					<h2 class="text-3xl lg:text-4xl font-bold text-slate-900">
+						Facilities & Infrastructure
+					</h2>
+					<p class="mt-4 text-lg text-slate-600">
+						Industry-grade tools and collaborative spaces enabling rapid innovation.
+					</p>
+				</div>
+
+				<!-- Cards -->
+				<div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+					<!-- Card -->
+					<div class="group cursor-pointer overflow-hidden rounded-2xl bg-white shadow hover:shadow-xl transition"
+						onclick="openModal('prototyping')">
+						<img src="assets/3d-printing.jpg" alt="Rapid Prototyping Lab"
+							class="h-48 w-full object-cover group-hover:scale-105 transition" />
+						<div class="p-6">
+							<h3 class="text-lg font-semibold text-slate-900">
+								Rapid Prototyping Lab
+							</h3>
+							<p class="mt-2 text-sm text-slate-600">
+								3D printing, CNC machining, and fabrication tools.
+							</p>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="group cursor-pointer overflow-hidden rounded-2xl bg-white shadow hover:shadow-xl transition"
+						onclick="openModal('electronics')">
+						<img src="assets/electronics-lab.jpg" alt="Electronics and IoT Lab"
+							class="h-48 w-full object-cover group-hover:scale-105 transition" />
+						<div class="p-6">
+							<h3 class="text-lg font-semibold text-slate-900">
+								Electronics & IoT Lab
+							</h3>
+							<p class="mt-2 text-sm text-slate-600">
+								Embedded systems, sensors, and IoT development kits.
+							</p>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="group cursor-pointer overflow-hidden rounded-2xl bg-white shadow hover:shadow-xl transition"
+						onclick="openModal('design')">
+						<img src="assets/design-studio.jpg" alt="Design and Simulation Studio"
+							class="h-48 w-full object-cover group-hover:scale-105 transition" />
+						<div class="p-6">
+							<h3 class="text-lg font-semibold text-slate-900">
+								Design & Simulation Studio
+							</h3>
+							<p class="mt-2 text-sm text-slate-600">
+								CAD, CAE, and virtual simulation software.
+							</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- Modal -->
+		<div id="facility-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60">
+			<div class="relative w-full max-w-lg rounded-2xl bg-white p-8">
+
+				<button onclick="closeModal()" class="absolute right-4 top-4 text-slate-500 hover:text-slate-900">
+					✕
+				</button>
+
+				<h3 id="modal-title" class="text-2xl font-bold text-slate-900"></h3>
+				<p id="modal-content" class="mt-4 text-slate-600"></p>
+
+			</div>
+		</div>
+		<section class="bg-white py-24">
+			<div class="max-w-7xl mx-auto px-6">
+
+				<!-- Header -->
+				<div class="max-w-2xl">
+					<h2 class="text-3xl lg:text-4xl font-bold text-slate-900">
+						Innovation Lifecycle
+					</h2>
+					<p class="mt-4 text-lg text-slate-600">
+						A structured journey that transforms ideas into impactful solutions.
+					</p>
+				</div>
+
+				<!-- Stepper -->
+				<div class="mt-16">
+
+					<!-- Desktop Horizontal -->
+					<div class="hidden lg:grid grid-cols-5 gap-6">
+
+						<!-- Step -->
+						<div class="text-center">
+							<div
+								class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-blue-900 text-white font-bold">
+								1
+							</div>
+							<h3 class="mt-4 font-semibold text-slate-900">Identify</h3>
+							<p class="mt-2 text-sm text-slate-600">
+								Understand real-world problems and user needs.
+							</p>
+						</div>
+
+						<div class="text-center">
+							<div
+								class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-blue-900 text-white font-bold">
+								2
+							</div>
+							<h3 class="mt-4 font-semibold text-slate-900">Ideate</h3>
+							<p class="mt-2 text-sm text-slate-600">
+								Brainstorm creative solutions using design thinking.
+							</p>
+						</div>
+
+						<div class="text-center">
+							<div
+								class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-blue-900 text-white font-bold">
+								3
+							</div>
+							<h3 class="mt-4 font-semibold text-slate-900">Prototype</h3>
+							<p class="mt-2 text-sm text-slate-600">
+								Build functional models using lab infrastructure.
+							</p>
+						</div>
+
+						<div class="text-center">
+							<div
+								class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-blue-900 text-white font-bold">
+								4
+							</div>
+							<h3 class="mt-4 font-semibold text-slate-900">Test</h3>
+							<p class="mt-2 text-sm text-slate-600">
+								Validate, iterate, and refine prototypes.
+							</p>
+						</div>
+
+						<div class="text-center">
+							<div
+								class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-blue-900 text-white font-bold">
+								5
+							</div>
+							<h3 class="mt-4 font-semibold text-slate-900">Launch</h3>
+							<p class="mt-2 text-sm text-slate-600">
+								Deploy as startups, patents, or real-world solutions.
+							</p>
+						</div>
+
+					</div>
+
+					<!-- Mobile Vertical -->
+					<div class="lg:hidden mt-12 space-y-8">
+						<div class="flex gap-4">
+							<div
+								class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-900 text-white font-bold">
+								1</div>
+							<div>
+								<h3 class="font-semibold text-slate-900">Identify</h3>
+								<p class="text-sm text-slate-600">Understand real-world problems.</p>
+							</div>
+						</div>
+
+						<div class="flex gap-4">
+							<div
+								class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-900 text-white font-bold">
+								2</div>
+							<div>
+								<h3 class="font-semibold text-slate-900">Ideate</h3>
+								<p class="text-sm text-slate-600">Generate innovative solutions.</p>
+							</div>
+						</div>
+
+						<div class="flex gap-4">
+							<div
+								class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-900 text-white font-bold">
+								3</div>
+							<div>
+								<h3 class="font-semibold text-slate-900">Prototype</h3>
+								<p class="text-sm text-slate-600">Build functional models.</p>
+							</div>
+						</div>
+
+						<div class="flex gap-4">
+							<div
+								class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-900 text-white font-bold">
+								4</div>
+							<div>
+								<h3 class="font-semibold text-slate-900">Test</h3>
+								<p class="text-sm text-slate-600">Iterate and refine solutions.</p>
+							</div>
+						</div>
+
+						<div class="flex gap-4">
+							<div
+								class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-900 text-white font-bold">
+								5</div>
+							<div>
+								<h3 class="font-semibold text-slate-900">Launch</h3>
+								<p class="text-sm text-slate-600">Deploy into real-world impact.</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<section id="programs" class="bg-slate-50 py-24">
+			<div class="max-w-7xl mx-auto px-6">
+
+				<!-- Header -->
+				<div class="max-w-2xl">
+					<h2 class="text-3xl lg:text-4xl font-bold text-slate-900">
+						Programs & Activities
+					</h2>
+					<p class="mt-4 text-lg text-slate-600">
+						Continuous learning initiatives fostering innovation and skills.
+					</p>
+				</div>
+
+				<!-- Timeline -->
+				<div class="relative mt-16">
+
+					<!-- Vertical Line -->
+					<div class="absolute left-4 top-0 h-full w-0.5 bg-blue-200"></div>
+
+					<!-- Item -->
+					<div class="relative pl-16 pb-16">
+						<div
+							class="absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-blue-900 text-white text-sm font-bold">
+							1
+						</div>
+						<h3 class="text-lg font-semibold text-slate-900">
+							Workshops & Bootcamps
+						</h3>
+						<p class="mt-2 text-slate-600 max-w-xl">
+							Hands-on sessions on prototyping, IoT, AI, and product development.
+						</p>
+					</div>
+
+					<div class="relative pl-16 pb-16">
+						<div
+							class="absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-blue-900 text-white text-sm font-bold">
+							2
+						</div>
+						<h3 class="text-lg font-semibold text-slate-900">
+							Hackathons & Innovation Challenges
+						</h3>
+						<p class="mt-2 text-slate-600 max-w-xl">
+							Competitive events encouraging problem-solving and creativity.
+						</p>
+					</div>
+
+					<div class="relative pl-16 pb-16">
+						<div
+							class="absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-blue-900 text-white text-sm font-bold">
+							3
+						</div>
+						<h3 class="text-lg font-semibold text-slate-900">
+							Faculty Development Programs
+						</h3>
+						<p class="mt-2 text-slate-600 max-w-xl">
+							Training programs enabling faculty to mentor innovation effectively.
+						</p>
+					</div>
+
+					<div class="relative pl-16">
+						<div
+							class="absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-blue-900 text-white text-sm font-bold">
+							4
+						</div>
+						<h3 class="text-lg font-semibold text-slate-900">
+							Industry & Community Projects
+						</h3>
+						<p class="mt-2 text-slate-600 max-w-xl">
+							Real-world projects aligned with industry and societal needs.
+						</p>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<section id="projects" class="bg-white py-24">
+			<div class="max-w-7xl mx-auto px-6">
+
+				<!-- Header -->
+				<div class="max-w-2xl">
+					<h2 class="text-3xl lg:text-4xl font-bold text-slate-900">
+						Projects & Innovations
+					</h2>
+					<p class="mt-4 text-lg text-slate-600">
+						Student-driven projects solving real-world challenges.
+					</p>
+				</div>
+
+				<!-- Filters -->
+				<div class="mt-12 flex flex-wrap gap-4">
+					<button class="filter-btn active" data-filter="all">All</button>
+					<button class="filter-btn" data-filter="ai">AI</button>
+					<button class="filter-btn" data-filter="iot">IoT</button>
+					<button class="filter-btn" data-filter="mechanical">Mechanical</button>
+					<button class="filter-btn" data-filter="social">Social Impact</button>
+				</div>
+
+				<!-- Cards -->
+				<div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+					<!-- Card -->
+					<article class="project-card" data-category="ai">
+						<img src="assets/project-ai.jpg" alt="AI Based Smart Monitoring System"
+							class="h-48 w-full object-cover" />
+						<div class="p-6">
+							<span
+								class="inline-block rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-900">
+								Prototype
+							</span>
+							<h3 class="mt-4 text-lg font-semibold text-slate-900">
+								AI Smart Monitoring System
+							</h3>
+							<p class="mt-2 text-sm text-slate-600">
+								AI-powered system for real-time environmental monitoring.
+							</p>
+						</div>
+					</article>
+
+					<!-- Card -->
+					<article class="project-card" data-category="iot">
+						<img src="assets/project-iot.jpg" alt="IoT Smart Agriculture System"
+							class="h-48 w-full object-cover" />
+						<div class="p-6">
+							<span
+								class="inline-block rounded-full bg-green-100 px-3 py-1 text-xs font-medium text-green-800">
+								Startup
+							</span>
+							<h3 class="mt-4 text-lg font-semibold text-slate-900">
+								Smart Agriculture Platform
+							</h3>
+							<p class="mt-2 text-sm text-slate-600">
+								IoT-based precision agriculture monitoring solution.
+							</p>
+						</div>
+					</article>
+
+					<!-- Card -->
+					<article class="project-card" data-category="social">
+						<img src="assets/project-social.jpg" alt="Assistive Device for Disabled"
+							class="h-48 w-full object-cover" />
+						<div class="p-6">
+							<span
+								class="inline-block rounded-full bg-yellow-100 px-3 py-1 text-xs font-medium text-yellow-800">
+								Patent Filed
+							</span>
+							<h3 class="mt-4 text-lg font-semibold text-slate-900">
+								Assistive Mobility Device
+							</h3>
+							<p class="mt-2 text-sm text-slate-600">
+								Affordable assistive device for physically challenged individuals.
+							</p>
+						</div>
+					</article>
+
+				</div>
+			</div>
+		</section>
+		<section class="bg-slate-50 py-24">
+			<div class="max-w-7xl mx-auto px-6">
+
+				<!-- Header -->
+				<div class="max-w-2xl">
+					<h2 class="text-3xl lg:text-4xl font-bold text-slate-900">
+						Mentors & Leadership
+					</h2>
+					<p class="mt-4 text-lg text-slate-600">
+						Guiding innovation with academic excellence and industry experience.
+					</p>
+				</div>
+
+				<!-- Profiles -->
+				<div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+
+					<!-- Profile -->
+					<div class="rounded-2xl bg-white p-6 text-center shadow hover:shadow-xl transition">
+						<img src="assets/mentor-1.jpg" alt="Dr. A. Sharma"
+							class="mx-auto h-28 w-28 rounded-full object-cover" />
+						<h3 class="mt-4 text-lg font-semibold text-slate-900">
+							Dr. A. Sharma
+						</h3>
+						<p class="text-sm text-slate-600">
+							IDEA Lab Coordinator
+						</p>
+						<a href="#" class="mt-4 inline-block text-blue-900 hover:text-blue-700 text-sm">
+							LinkedIn →
+						</a>
+					</div>
+
+					<!-- Profile -->
+					<div class="rounded-2xl bg-white p-6 text-center shadow hover:shadow-xl transition">
+						<img src="assets/mentor-2.jpg" alt="Ms. R. Mehta"
+							class="mx-auto h-28 w-28 rounded-full object-cover" />
+						<h3 class="mt-4 text-lg font-semibold text-slate-900">
+							Ms. R. Mehta
+						</h3>
+						<p class="text-sm text-slate-600">
+							Industry Mentor
+						</p>
+						<a href="#" class="mt-4 inline-block text-blue-900 hover:text-blue-700 text-sm">
+							LinkedIn →
+						</a>
+					</div>
+
+					<!-- Profile -->
+					<div class="rounded-2xl bg-white p-6 text-center shadow hover:shadow-xl transition">
+						<img src="assets/mentor-3.jpg" alt="Prof. S. Verma"
+							class="mx-auto h-28 w-28 rounded-full object-cover" />
+						<h3 class="mt-4 text-lg font-semibold text-slate-900">
+							Prof. S. Verma
+						</h3>
+						<p class="text-sm text-slate-600">
+							Faculty Mentor
+						</p>
+						<a href="#" class="mt-4 inline-block text-blue-900 hover:text-blue-700 text-sm">
+							LinkedIn →
+						</a>
+					</div>
+
+					<!-- Profile -->
+					<div class="rounded-2xl bg-white p-6 text-center shadow hover:shadow-xl transition">
+						<img src="assets/mentor-4.jpg" alt="Mr. K. Iyer"
+							class="mx-auto h-28 w-28 rounded-full object-cover" />
+						<h3 class="mt-4 text-lg font-semibold text-slate-900">
+							Mr. K. Iyer
+						</h3>
+						<p class="text-sm text-slate-600">
+							Startup Advisor
+						</p>
+						<a href="#" class="mt-4 inline-block text-blue-900 hover:text-blue-700 text-sm">
+							LinkedIn →
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<section class="bg-gradient-to-br from-blue-900 to-indigo-900 py-24 text-white">
+			<div class="max-w-7xl mx-auto px-6 grid gap-16 lg:grid-cols-2 items-center">
+
+				<!-- CTA Content -->
+				<div>
+					<h2 class="text-3xl lg:text-4xl font-bold">
+						Ready to Build, Innovate & Launch?
+					</h2>
+					<p class="mt-6 text-lg text-blue-100">
+						Join the IDEA Lab and transform your ideas into impactful innovations
+						with access to world-class facilities, mentors, and funding pathways.
+					</p>
+
+					<ul class="mt-8 space-y-3 text-blue-100">
+						<li>✔ Open to Students, Faculty & Startups</li>
+						<li>✔ AICTE-Supported Innovation Ecosystem</li>
+						<li>✔ Prototype → Product → Startup Journey</li>
+					</ul>
+				</div>
+
+				<!-- Application Form -->
+				<form class="rounded-2xl bg-white p-8 text-slate-900 shadow-xl" aria-label="IDEA Lab Application Form">
+					<h3 class="text-xl font-semibold">Apply to IDEA Lab</h3>
+
+					<div class="mt-6 space-y-4">
+						<input type="text" placeholder="Full Name" required
+							class="w-full rounded-lg border border-slate-300 px-4 py-3 focus:border-blue-900 focus:outline-none" />
+
+						<input type="email" placeholder="Email Address" required
+							class="w-full rounded-lg border border-slate-300 px-4 py-3 focus:border-blue-900 focus:outline-none" />
+
+						<select
+							class="w-full rounded-lg border border-slate-300 px-4 py-3 focus:border-blue-900 focus:outline-none">
+							<option>Applicant Type</option>
+							<option>Student</option>
+							<option>Faculty</option>
+							<option>Startup / Industry</option>
+						</select>
+
+						<textarea rows="4" placeholder="Briefly describe your idea"
+							class="w-full rounded-lg border border-slate-300 px-4 py-3 focus:border-blue-900 focus:outline-none"></textarea>
+					</div>
+
+					<button type="submit"
+						class="mt-6 w-full rounded-lg bg-blue-900 py-3 font-semibold text-white hover:bg-blue-800 transition">
+						Submit Application
+					</button>
+				</form>
+			</div>
+		</section>
+		<section class="bg-slate-50 py-24">
+			<div class="max-w-7xl mx-auto px-6">
+
+				<header class="max-w-2xl">
+					<h2 class="text-3xl lg:text-4xl font-bold text-slate-900">
+						Impact & Outcomes
+					</h2>
+					<p class="mt-4 text-lg text-slate-600">
+						Measuring innovation through real-world impact.
+					</p>
+				</header>
+
+				<div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 text-center">
+
+					<div class="rounded-2xl bg-white p-8 shadow">
+						<p class="text-4xl font-bold text-blue-900">120+</p>
+						<p class="mt-2 text-slate-600">Student Projects</p>
+					</div>
+
+					<div class="rounded-2xl bg-white p-8 shadow">
+						<p class="text-4xl font-bold text-blue-900">35+</p>
+						<p class="mt-2 text-slate-600">Prototypes Developed</p>
+					</div>
+
+					<div class="rounded-2xl bg-white p-8 shadow">
+						<p class="text-4xl font-bold text-blue-900">12</p>
+						<p class="mt-2 text-slate-600">Startups Incubated</p>
+					</div>
+
+					<div class="rounded-2xl bg-white p-8 shadow">
+						<p class="text-4xl font-bold text-blue-900">8</p>
+						<p class="mt-2 text-slate-600">Patents Filed</p>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<section id="contact" class="bg-white py-24">
+			<div class="max-w-7xl mx-auto px-6 grid gap-16 lg:grid-cols-2">
+
+				<!-- Contact Info -->
+				<div>
+					<h2 class="text-3xl font-bold text-slate-900">
+						Contact IDEA Lab
+					</h2>
+					<p class="mt-4 text-lg text-slate-600">
+						Reach out to collaborate, mentor, or innovate with us.
+					</p>
+
+					<div class="mt-8 space-y-4 text-slate-700">
+						<p><strong>Address:</strong> Institute Campus, City, State</p>
+						<p><strong>Email:</strong> idealab@institute.edu</p>
+						<p><strong>Phone:</strong> +91-XXXXXXXXXX</p>
+					</div>
+				</div>
+
+				<!-- Map Placeholder -->
+				<div class="rounded-2xl bg-slate-200 h-80 flex items-center justify-center text-slate-500">
+					Google Map Embed
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="bg-slate-900 text-slate-300 py-12">
+		<div class="max-w-7xl mx-auto px-6 grid gap-8 md:grid-cols-3">
+
+			<div>
+				<h3 class="text-lg font-semibold text-white">IDEA Lab</h3>
+				<p class="mt-4 text-sm">
+					AICTE-supported innovation hub fostering creativity, prototyping,
+					and entrepreneurship.
+				</p>
+			</div>
+
+			<nav>
+				<h4 class="text-white font-semibold">Quick Links</h4>
+				<ul class="mt-4 space-y-2 text-sm">
+					<li><a href="#about" class="hover:text-white">About</a></li>
+					<li><a href="#facilities" class="hover:text-white">Facilities</a></li>
+					<li><a href="#projects" class="hover:text-white">Projects</a></li>
+					<li><a href="#contact" class="hover:text-white">Contact</a></li>
+				</ul>
+			</nav>
+
+			<div>
+				<h4 class="text-white font-semibold">Compliance</h4>
+				<p class="mt-4 text-sm">
+					Implemented as per AICTE IDEA Lab Guidelines.
+				</p>
+			</div>
+
+		</div>
+
+		<div class="mt-12 border-t border-slate-700 pt-6 text-center text-sm">
+			© 2026 Institute Name. All rights reserved.
+		</div>
+	</footer>
+	<script src=""></script>
+</body>
+
+</html>
