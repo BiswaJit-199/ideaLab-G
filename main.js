@@ -22,22 +22,38 @@ const title = document.getElementById("modal-title");
 const content = document.getElementById("modal-content");
 
 const facilityData = {
-	prototyping: {
-		title: "Rapid Prototyping Lab",
+	additive: {
+		title: "Additive Manufacturing Lab",
 		content:
-			"Equipped with 3D printers, CNC machines, laser cutters, and fabrication tools enabling fast product development."
+			"Advanced additive manufacturing facilities including industrial-grade 3D printers for rapid prototyping, functional parts, and complex geometries."
 	},
-	electronics: {
-		title: "Electronics & IoT Lab",
+	digital: {
+		title: "Digital Manufacturing Lab",
 		content:
-			"Supports embedded systems, sensor integration, PCB design, and IoT-based innovation projects."
+			"Digitally enabled manufacturing tools such as CNC machining, laser cutting, and precision fabrication systems supporting smart production workflows."
+	},
+	iot: {
+		title: "IoT & Automation Lab",
+		content:
+			"Comprehensive IoT and automation setup with sensors, microcontrollers, PLCs, and real-time data acquisition for smart systems development."
+	},
+	pcb: {
+		title: "Chip / PCB Design Lab",
+		content:
+			"Facilities for electronic circuit design, schematic development, PCB layout, prototyping, and hardware testing for embedded applications."
+	},
+	product: {
+		title: "Product Design Lab",
+		content:
+			"Design thinking-driven product development lab focused on ideation, ergonomics, user experience, and physical product realization."
 	},
 	design: {
 		title: "Design & Simulation Studio",
 		content:
-			"Advanced CAD, CAE, and simulation software to validate and optimize designs before fabrication."
+			"Advanced CAD, CAE, and simulation software to validate, analyze, and optimize designs before manufacturing."
 	}
 };
+
 
 function openModal(key) {
 	title.textContent = facilityData[key].title;
