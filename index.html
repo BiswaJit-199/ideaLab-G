@@ -9,14 +9,14 @@
 	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 	<style type="text/tailwindcss">
 		.filter-btn {
-    @apply rounded-full border border-slate-300 px-5 py-2 text-sm font-medium text-slate-700 transition hover:bg-blue-900 hover:text-white;
-  }
-  .filter-btn.active {
-    @apply bg-blue-900 text-white border-blue-900;
-  }
-  .project-card {
-    @apply overflow-hidden rounded-2xl bg-white shadow hover:shadow-xl transition;
-  }
+    		@apply rounded-full border border-slate-300 px-5 py-2 text-sm font-medium text-slate-700 transition hover:bg-blue-900 hover:text-white;
+  		}
+  		.filter-btn.active {
+    		@apply bg-blue-900 text-white border-blue-900;
+  		}
+  		.project-card {
+    		@apply overflow-hidden rounded-2xl bg-white shadow hover:shadow-xl transition;
+  		}
 	</style>
 </head>
 
@@ -27,11 +27,9 @@
 
 				<!-- Logo -->
 				<div class="flex items-center gap-3">
-					<img src="assets/idealab-logo.png" alt="AICTE IDEA Lab Logo" class="h-11 w-11 object-contain" />
-					<div class="leading-tight">
-						<p class="text-lg font-semibold text-blue-900">IDEA Lab</p>
-						<p class="text-sm text-slate-500">Your Institute Name</p>
-					</div>
+					<img loading="lazy" src="assets/aicte.png" alt="AICTE Logo" class="h-11 w-11 object-contain" />
+					<img loading="lazy" src="assets/ideaLab.png" alt="IDEA Lab Logo" class="h-11 w-11 object-contain" />
+					<img loading="lazy" src="assets/logo.png" alt="GIFT Autonomous Logo" class="h-11 w-11 object-contain" />
 				</div>
 
 				<!-- Desktop Menu -->
@@ -46,7 +44,7 @@
 
 				<!-- CTA -->
 				<div class="hidden lg:block">
-					<a href="#apply"
+					<a href="#contact"
 						class="rounded-full bg-blue-900 px-6 py-3 text-sm font-semibold text-white hover:bg-blue-800 transition">
 						Apply Now
 					</a>
@@ -71,7 +69,7 @@
 				<li><a href="#projects">Projects</a></li>
 				<li><a href="#contact">Contact</a></li>
 				<li>
-					<a href="#apply" class="block text-center rounded-full bg-blue-900 py-3 text-white font-semibold">
+					<a href="#contact" class="block text-center rounded-full bg-blue-900 py-3 text-white font-semibold">
 						Apply Now
 					</a>
 				</li>
@@ -79,7 +77,7 @@
 		</div>
 	</header>
 	<main>
-		<section id="home" class="relative overflow-hidden bg-gradient-to-br from-blue-900 to-blue-700">
+		<section id="home" class="relative overflow-hidden bg-gradient-to-tl from-blue-900 to-blue-700">
 			<div class="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
 
 				<!-- Content -->
@@ -99,7 +97,7 @@
 					</p>
 
 					<div class="mt-8 flex flex-wrap gap-4">
-						<a href="#apply"
+						<a href="#contact"
 							class="rounded-full bg-white px-8 py-4 text-blue-900 font-semibold hover:bg-blue-100 transition">
 							Apply to IDEA Lab
 						</a>
@@ -112,7 +110,7 @@
 
 				<!-- Visual -->
 				<div class="relative">
-					<img src="assets/hero-innovation.png" alt="Students working in IDEA Lab"
+					<img loading="lazy" src="assets/heroImage.png" alt="Illustrative Image of IDEA Lab"
 						class="rounded-2xl shadow-2xl" />
 
 					<!-- Floating Stats -->
@@ -128,10 +126,10 @@
 			<div class="max-w-7xl mx-auto px-6 py-10">
 				<div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center opacity-80">
 
-					<img src="assets/aicte-logo.png" alt="AICTE Logo" class="h-12" />
-					<img src="assets/govt-india-logo.png" alt="Government of India" class="h-12" />
-					<img src="assets/startup-india-logo.png" alt="Startup India" class="h-12" />
-					<img src="assets/naac-logo.png" alt="NAAC Accreditation" class="h-12" />
+					<img loading="lazy" src="assets/aicte.png" alt="AICTE Logo" class="h-12" />
+					<img loading="lazy" src="assets/National-Emblem.jpg" alt="Government of India" class="h-12" />
+					<img loading="lazy" src="assets/Startup-India.png" alt="Startup India" class="h-12" />
+					<img loading="lazy" src="assets/naac-logo.png" alt="NAAC Accreditation" class="h-12" />
 
 				</div>
 			</div>
@@ -141,7 +139,7 @@
 
 				<!-- Illustration / Visual -->
 				<div>
-					<img src="assets/idea-lab-process.png" alt="IDEA Lab Innovation Process"
+					<img loading="lazy" src="assets/idea-lab-process.png" alt="IDEA Lab Innovation Process"
 						class="rounded-2xl shadow-lg" />
 				</div>
 
@@ -226,7 +224,7 @@
 					<!-- Card -->
 					<div class="group cursor-pointer overflow-hidden rounded-2xl bg-white shadow hover:shadow-xl transition"
 						onclick="openModal('prototyping')">
-						<img src="assets/3d-printing.jpg" alt="Rapid Prototyping Lab"
+						<img loading="lazy" src="assets/3d-printing.jpg" alt="Rapid Prototyping Lab"
 							class="h-48 w-full object-cover group-hover:scale-105 transition" />
 						<div class="p-6">
 							<h3 class="text-lg font-semibold text-slate-900">
@@ -241,7 +239,7 @@
 					<!-- Card -->
 					<div class="group cursor-pointer overflow-hidden rounded-2xl bg-white shadow hover:shadow-xl transition"
 						onclick="openModal('electronics')">
-						<img src="assets/electronics-lab.jpg" alt="Electronics and IoT Lab"
+						<img loading="lazy" src="assets/electronics-lab.jpg" alt="Electronics and IoT Lab"
 							class="h-48 w-full object-cover group-hover:scale-105 transition" />
 						<div class="p-6">
 							<h3 class="text-lg font-semibold text-slate-900">
@@ -256,7 +254,7 @@
 					<!-- Card -->
 					<div class="group cursor-pointer overflow-hidden rounded-2xl bg-white shadow hover:shadow-xl transition"
 						onclick="openModal('design')">
-						<img src="assets/design-studio.jpg" alt="Design and Simulation Studio"
+						<img loading="lazy" src="assets/design-studio.jpg" alt="Design and Simulation Studio"
 							class="h-48 w-full object-cover group-hover:scale-105 transition" />
 						<div class="p-6">
 							<h3 class="text-lg font-semibold text-slate-900">
@@ -519,7 +517,7 @@
 
 					<!-- Card -->
 					<article class="project-card" data-category="ai">
-						<img src="assets/project-ai.jpg" alt="AI Based Smart Monitoring System"
+						<img loading="lazy" src="assets/project-ai.jpg" alt="AI Based Smart Monitoring System"
 							class="h-48 w-full object-cover" />
 						<div class="p-6">
 							<span
@@ -537,7 +535,7 @@
 
 					<!-- Card -->
 					<article class="project-card" data-category="iot">
-						<img src="assets/project-iot.jpg" alt="IoT Smart Agriculture System"
+						<img loading="lazy" src="assets/project-iot.jpg" alt="IoT Smart Agriculture System"
 							class="h-48 w-full object-cover" />
 						<div class="p-6">
 							<span
@@ -555,7 +553,7 @@
 
 					<!-- Card -->
 					<article class="project-card" data-category="social">
-						<img src="assets/project-social.jpg" alt="Assistive Device for Disabled"
+						<img loading="lazy" src="assets/project-social.jpg" alt="Assistive Device for Disabled"
 							class="h-48 w-full object-cover" />
 						<div class="p-6">
 							<span
@@ -592,7 +590,7 @@
 
 					<!-- Profile -->
 					<div class="rounded-2xl bg-white p-6 text-center shadow hover:shadow-xl transition">
-						<img src="assets/mentor-1.jpg" alt="Dr. A. Sharma"
+						<img loading="lazy" src="assets/mentor-1.jpg" alt="Dr. A. Sharma"
 							class="mx-auto h-28 w-28 rounded-full object-cover" />
 						<h3 class="mt-4 text-lg font-semibold text-slate-900">
 							Dr. A. Sharma
@@ -607,7 +605,7 @@
 
 					<!-- Profile -->
 					<div class="rounded-2xl bg-white p-6 text-center shadow hover:shadow-xl transition">
-						<img src="assets/mentor-2.jpg" alt="Ms. R. Mehta"
+						<img loading="lazy" src="assets/mentor-2.jpg" alt="Ms. R. Mehta"
 							class="mx-auto h-28 w-28 rounded-full object-cover" />
 						<h3 class="mt-4 text-lg font-semibold text-slate-900">
 							Ms. R. Mehta
@@ -622,7 +620,7 @@
 
 					<!-- Profile -->
 					<div class="rounded-2xl bg-white p-6 text-center shadow hover:shadow-xl transition">
-						<img src="assets/mentor-3.jpg" alt="Prof. S. Verma"
+						<img loading="lazy" src="assets/mentor-3.jpg" alt="Prof. S. Verma"
 							class="mx-auto h-28 w-28 rounded-full object-cover" />
 						<h3 class="mt-4 text-lg font-semibold text-slate-900">
 							Prof. S. Verma
@@ -637,7 +635,7 @@
 
 					<!-- Profile -->
 					<div class="rounded-2xl bg-white p-6 text-center shadow hover:shadow-xl transition">
-						<img src="assets/mentor-4.jpg" alt="Mr. K. Iyer"
+						<img loading="lazy" src="assets/mentor-4.jpg" alt="Mr. K. Iyer"
 							class="mx-auto h-28 w-28 rounded-full object-cover" />
 						<h3 class="mt-4 text-lg font-semibold text-slate-900">
 							Mr. K. Iyer
@@ -753,9 +751,9 @@
 					</p>
 
 					<div class="mt-8 space-y-4 text-slate-700">
-						<p><strong>Address:</strong> Institute Campus, City, State</p>
-						<p><strong>Email:</strong> idealab@institute.edu</p>
-						<p><strong>Phone:</strong> +91-XXXXXXXXXX</p>
+						<p><strong>Address:</strong> Gandhi Institute for Technology(GIFT), Bhubaneswar, Odisha</p>
+						<p><strong>Email:</strong> <a href="mailto:amanohar@gift.edu.in" class="hover:underline hover:text-blue-500 hover:font-semibold">amanohar@gift.edu.in</a> / <a href="mailto:"></a></p>
+						<p><strong>Phone:</strong> <a href="tel:+917873008162" class="hover:underline hover:text-blue-500 hover:font-semibold">+91-7873008162</a> / <a href="tel:">+91-</a></p>
 					</div>
 				</div>
 
@@ -797,10 +795,9 @@
 		</div>
 
 		<div class="mt-12 border-t border-slate-700 pt-6 text-center text-sm">
-			© 2026 Institute Name. All rights reserved.
+			© 2026 Gandhi Institute for Technology(GIFT). All rights reserved.
 		</div>
 	</footer>
-	<script src=""></script>
 </body>
 
 </html>
