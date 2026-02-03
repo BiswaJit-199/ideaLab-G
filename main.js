@@ -13,40 +13,9 @@ window.addEventListener("scroll", () => {
 	}
 });
 
-
-
 menuBtn.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden");
-
-  const expanded = menuBtn.getAttribute("aria-expanded") === "true";
-  menuBtn.setAttribute("aria-expanded", !expanded);
-  menuBtn.textContent = expanded ? "☰" : "✕";
+	mobileMenu.classList.toggle("hidden");
 });
-// Close mobile menu when a menu item is clicked
-const mobileLinks = mobileMenu.querySelectorAll("a");
-
-mobileLinks.forEach(link => {
-  link.addEventListener("click", () => {
-    mobileMenu.classList.add("hidden");
-
-    // Reset hamburger icon & aria
-    menuBtn.setAttribute("aria-expanded", "false");
-    menuBtn.textContent = "☰";
-  });
-});
-
-window.addEventListener("resize", () => {
-  if (window.innerWidth >= 1024) {
-    mobileMenu.classList.add("hidden");
-    menuBtn.textContent = "☰";
-    menuBtn.setAttribute("aria-expanded", "false");
-  }
-});
-
-
-
-
-
 
 const modal = document.getElementById("facility-modal");
 const title = document.getElementById("modal-title");
