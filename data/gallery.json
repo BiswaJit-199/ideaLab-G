@@ -1,0 +1,24 @@
+{
+	"inaguration": [
+		{
+			"id": 1,
+			"title": "Inauguration of IDEA LAB - MAKERS SPACE",
+			"description": "The IDEA LAB - MAKERS SPACE was inaugurated with great enthusiasm and pride, marking a significant milestone in our institution's journey toward fostering innovation, creativity, and hands-on learning. This state-of-the-art Makers Space has been established to empower students and faculty with opportunities for interdisciplinary innovation, product design, rapid prototyping, and entrepreneurial thinking - transforming brilliant ideas into tangible prototypes and real-world solutions.<br>The ceremony was graced by the esteemed presence of Prof. Amiya Kumar Rath, Vice Chancellor of Biju Patnaik University of Technology, whose visionary outlook and leadership in higher education inspire innovation across the state's technical institutions.<br>We were also honored to welcome Dr. Patitapaban Panda, Director of Gandhi Institute for Technology, a distinguished leader known for championing academic excellence and industry-aligned education.<br>The event was attended by our Principal, faculty members, students, and special guests, whose presence and support added immense value to the celebration.<br>The inauguration of the IDEA LAB - MAKERS SPACE signifies a new era of experiential learning and innovation on campus. It reinforces our commitment to nurturing creative minds, encouraging collaborative research, and preparing students to contribute meaningfully to industry and society.<br>We look forward to the remarkable innovations and entrepreneurial successes that will emerge from this creative space.",
+			"tags": [
+				"Program",
+				"Inaguration"
+			],
+			"date": "2026-02-14T12:00:00+05:30",
+			"images": [
+				"./assets/inaguration/2.jpeg",
+				"./assets/inaguration/6.jpeg",
+				"./assets/inaguration/9.jpeg",
+				"./assets/inaguration/11.jpeg",
+				"./assets/inaguration/14.jpeg",
+				"./assets/inaguration/15.jpeg",
+				"./assets/inaguration/16.jpeg",
+				"./assets/inaguration/17.jpeg"
+			]
+		}
+	]
+}
