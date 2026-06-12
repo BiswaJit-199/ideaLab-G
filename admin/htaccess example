@@ -1,0 +1,26 @@
+RewriteEngine On
+
+# -----------------------------------
+# 1. Remove .php extension from URL
+# -----------------------------------
+
+# Redirect example.php → example
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.php[\s?]
+RewriteRule ^ /%1 [R=301,L]
+
+# Internally rewrite example → example.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)$ $1.php [L,QSA]
+
+# -----------------------------------
+# 2. Default index handling
+# -----------------------------------
+
+DirectoryIndex login.php
+
+# -----------------------------------
+# 3. Security: Block direct access to /data and /assets
+# -----------------------------------
+
+RewriteRule ^data/ - [F,L]

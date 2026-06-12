@@ -32,7 +32,7 @@
 	<div class="border-t-[2px] border-slate-800 mt-6">
 		<div class="p-4 text-sm flex flex-wrap items-center justify-between">
 			<p>&copy; 2026 Gandhi Institute for Technology(GIFT). All rights reserved.</p>
-			<p>Built with ❤️. Designed by <span class="font-semibold">Mr. Biswajit & Mr. Biswa Ranjan.</span></p>
+			<p>Built with ❤️. Designed by <span class="font-semibold"><a href="https://biswajit-199.github.io/Biswajit-Portfolio/" target="_blank" rel="noopener noreferrer">Mr. Biswajit</a> & Mr. Biswa Ranjan.</span></p>
 		</div>
 	</div>
 </footer>

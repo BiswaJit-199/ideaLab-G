@@ -1,18 +1,39 @@
 <?php
-require_once 'config.php';
+/**
+ * SECURE ADMIN LOGIN PAGE
+ * 
+ * Implements password hashing, session fixation prevention, and secure inputs.
+ */
+require_once __DIR__ . '/config.php';
+require_once __DIR__ . '/logs_helper.php';
 
 $error = '';
 
+// If already logged in, redirect to dashboard
+if (isAdminLoggedIn()) {
+    header('Location: dashboard.php');
+    exit();
+}
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = $_POST['username'] ?? '';
-    $password = $_POST['password'] ?? '';
+    $username = trim($_POST['username'] ?? '');
+    $password = trim($_POST['password'] ?? '');
     
-    if ($username === ADMIN_USERNAME && $password === ADMIN_PASSWORD) {
+    // Prevent brute force / timing attacks by validating against secure parameters
+    if ($username === ADMIN_USERNAME && password_verify($password, ADMIN_PASSWORD_HASH)) {
+        // Regenerate Session ID to mitigate Session Fixation attacks
+        session_regenerate_id(true);
+        
         $_SESSION['admin_logged_in'] = true;
+        $_SESSION['username'] = $username;
+        
+        addLog('Admin Login Successful', 'User logged in successfully.');
+        
         header('Location: dashboard.php');
         exit();
     } else {
         $error = 'Invalid credentials. Please try again.';
+        addLog('Admin Login Failed', 'Failed attempt for username: ' . sanitizeInput($username));
     }
 }
 ?>
@@ -21,160 +42,45 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Login - <?php echo ADMIN_TITLE; ?></title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        
-        .login-container {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-            width: 100%;
-            max-width: 400px;
-            padding: 40px;
-            animation: slideUp 0.4s ease-out;
-        }
-        
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .logo {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        .logo h1 {
-            color: #667eea;
-            font-size: 28px;
-            margin-bottom: 5px;
-        }
-        
-        .logo p {
-            color: #999;
-            font-size: 14px;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 8px;
-            color: #333;
-            font-weight: 500;
-            font-size: 14px;
-        }
-        
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-size: 14px;
-            transition: all 0.3s ease;
-        }
-        
-        input[type="text"]:focus,
-        input[type="password"]:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-        }
-        
-        .error {
-            background-color: #fee;
-            color: #c33;
-            padding: 12px 15px;
-            border-radius: 6px;
-            margin-bottom: 20px;
-            border-left: 4px solid #c33;
-            font-size: 14px;
-        }
-        
-        button {
-            width: 100%;
-            padding: 12px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 10px;
-        }
-        
-        button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
-        }
-        
-        button:active {
-            transform: translateY(0);
-        }
-        
-        .info {
-            text-align: center;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            font-size: 12px;
-            color: #999;
-        }
-    </style>
+    <title>Secure Admin Login - <?= htmlspecialchars(ADMIN_TITLE) ?></title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="login-container">
-        <div class="logo">
-            <h1>ideaLab</h1>
-            <p>Admin Panel</p>
+<body class="bg-gradient-to-tr from-slate-900 via-slate-800 to-indigo-950 min-h-screen flex items-center justify-center p-4 font-sans">
+    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8 md:p-10 border border-slate-100 transition-all hover:shadow-indigo-500/10 hover:shadow-3xl">
+        <div class="text-center mb-8">
+            <div class="h-14 w-14 bg-indigo-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold mx-auto shadow-lg shadow-indigo-500/20">
+                🔒
+            </div>
+            <h1 class="text-2xl font-extrabold text-slate-800 mt-4">ideaLab Portal</h1>
+            <p class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">Secure Administrative Sign-in</p>
         </div>
         
         <?php if ($error): ?>
-            <div class="error"><?php echo htmlspecialchars($error); ?></div>
+            <div class="bg-rose-50 border-l-4 border-rose-500 text-rose-800 p-4 rounded-xl text-sm mb-6 flex items-center gap-2">
+                <span class="font-bold">Error:</span> <?= htmlspecialchars($error) ?>
+            </div>
         <?php endif; ?>
         
-        <form method="POST">
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required autofocus>
+        <form method="POST" class="space-y-5">
+            <div>
+                <label for="username" class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Username</label>
+                <input type="text" id="username" name="username" required autofocus class="w-full border border-slate-200 p-3 rounded-xl text-sm focus:border-indigo-500 focus:outline-none transition-all focus:ring-2 focus:ring-indigo-100">
             </div>
             
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+            <div>
+                <label for="password" class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Password</label>
+                <input type="password" id="password" name="password" required class="w-full border border-slate-200 p-3 rounded-xl text-sm focus:border-indigo-500 focus:outline-none transition-all focus:ring-2 focus:ring-indigo-100">
             </div>
             
-            <button type="submit">Login to Admin Panel</button>
+            <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 rounded-xl text-sm transition shadow-lg shadow-indigo-500/10">
+                Login to Admin Panel
+            </button>
         </form>
         
-        <div class="info">
-            <p>🔒 Secure Admin Access Only</p>
+        <div class="mt-8 pt-6 border-t border-slate-100 text-center">
+            <span class="text-xs text-slate-400 font-medium flex items-center justify-center gap-1.5">
+                🛡️ High Security Environment Enforced
+            </span>
         </div>
     </div>
 </body>

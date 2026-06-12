@@ -363,8 +363,8 @@ include "./header.php";
 	{
 		"@context": "https://schema.org",
 		"@type": "CollectionPage",
-		"name": "Balaram Panda Trust — Gallery",
-		"description": "Photo gallery showing events, trainings and impact from Balaram Panda Trust.",
+		"name": "GIFT IdeaLab - Gallery",
+		"description": "Photo gallery showing events, trainings and impact from IdeaLab - GIFT Autonomous.",
 		"hasPart": [
 			<?php
 			$ld = [];

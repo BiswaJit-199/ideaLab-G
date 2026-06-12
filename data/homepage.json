@@ -1,0 +1,243 @@
+{
+  "hero": {
+    "badge": "AICTE Approved IDEA Lab",
+    "title": "Building India’s <br />\nNext Generation of Innovators",
+    "subtitle": "A national innovation ecosystem empowering students to ideate,\nprototype, and transform ideas into real-world solutions.",
+    "cta_primary_text": "Apply to IDEA Lab",
+    "cta_primary_link": "#contact",
+    "cta_secondary_text": "Explore Facilities",
+    "cta_secondary_link": "#facilities",
+    "visual_type": "image", 
+    "visual_url": "assets/heroImage.png"
+  },
+  "partners": [
+    {"name": "AICTE", "logo": "assets/aicte.png"},
+    {"name": "Government of India", "logo": "assets/National-Emblem.jpg"},
+    {"name": "Startup India", "logo": "assets/startup-india-logo.png"},
+    {"name": "NAAC", "logo": "assets/naac_logo_u.png"}
+  ],
+  "about": {
+    "title": "What is an IDEA Lab?",
+    "description": "An AICTE-recognized IDEA Lab is a multidisciplinary innovation space\nwhere students transform ideas into impactful solutions through\nhands-on learning, prototyping, and real-world application.",
+    "image": "assets/heroImage2.png",
+    "pillars": [
+      {
+        "num": "01",
+        "title": "Ideation",
+        "desc": "Identify real-world problems using design thinking and creativity."
+      },
+      {
+        "num": "02",
+        "title": "Prototyping",
+        "desc": "Convert ideas into functional prototypes using advanced tools."
+      },
+      {
+        "num": "03",
+        "title": "Application",
+        "desc": "Scale innovations into startups, patents, and deployable solutions."
+      }
+    ]
+  },
+  "facilities_header": {
+    "title": "Facilities & Infrastructure",
+    "subtitle": "State-of-the-art labs empowering innovation from concept to realization."
+  },
+  "facilities": [
+    {
+      "key": "additive",
+      "title": "Additive Manufacturing Lab",
+      "subtitle": "Industrial-grade 3D printing for rapid prototyping and complex part fabrication."
+    },
+    {
+      "key": "digital",
+      "title": "Digital Manufacturing Lab",
+      "subtitle": "CNC machining, laser cutting, and digitally controlled fabrication systems."
+    },
+    {
+      "key": "iot",
+      "title": "IoT & Automation Lab",
+      "subtitle": "Smart systems development using sensors, controllers, and automation hardware."
+    },
+    {
+      "key": "pcb",
+      "title": "Chip / PCB Design Lab",
+      "subtitle": "Circuit design, PCB layout, prototyping, and electronic hardware testing."
+    },
+    {
+      "key": "product",
+      "title": "Product Design Lab",
+      "subtitle": "Human-centered product ideation, ergonomics, and design thinking workflows."
+    },
+    {
+      "key": "design",
+      "title": "Design & Simulation Studio",
+      "subtitle": "CAD, CAE, and simulation tools for design validation and optimization."
+    }
+  ],
+  "lifecycle_header": {
+    "title": "Innovation Lifecycle",
+    "subtitle": "A structured journey that transforms ideas into impactful solutions."
+  },
+  "lifecycle": [
+    {
+      "step": "1",
+      "title": "Identify",
+      "desc": "Understand real-world problems and user needs."
+    },
+    {
+      "step": "2",
+      "title": "Ideate",
+      "desc": "Brainstorm creative solutions using design thinking."
+    },
+    {
+      "step": "3",
+      "title": "Prototype",
+      "desc": "Build functional models using lab infrastructure."
+    },
+    {
+      "step": "4",
+      "title": "Test",
+      "desc": "Validate, iterate, and refine prototypes."
+    },
+    {
+      "step": "5",
+      "title": "Launch",
+      "desc": "Deploy as startups, patents, or real-world solutions."
+    }
+  ],
+  "programs_header": {
+    "title": "Programs & Activities",
+    "subtitle": "Continuous learning initiatives fostering innovation and skills."
+  },
+  "programs": [
+    {
+      "num": "1",
+      "title": "Workshops & Bootcamps",
+      "desc": "Hands-on sessions on prototyping, IoT, AI, and product development."
+    },
+    {
+      "num": "2",
+      "title": "Hackathons & Innovation Challenges",
+      "desc": "Competitive events encouraging problem-solving and creativity."
+    },
+    {
+      "num": "3",
+      "title": "Faculty Development Programs",
+      "desc": "Training programs enabling faculty to mentor innovation effectively."
+    },
+    {
+      "num": "4",
+      "title": "Industry & Community Projects",
+      "desc": "Real-world projects aligned with industry and societal needs."
+    },
+    {
+      "num": "5",
+      "title": "Student Development & Hands-on Skilling Program",
+      "desc": "Training programs enabling students to innovate effectively."
+    }
+  ],
+  "projects_header": {
+    "title": "Projects & Innovations",
+    "subtitle": "Student-driven projects solving real-world challenges."
+  },
+  "projects": [
+    {
+      "id": "proj-1",
+      "category": "iot",
+      "category_label": "IoT Healthcare",
+      "title": "Smart Health Monitoring System using Arduino",
+      "desc": "An Arduino-based system that continuously monitors vital health parameters such as heart rate, body temperature, and blood oxygen level (SpO2). It displays real-time data on an LCD and generates alerts during abnormal conditions, making it ideal for elderly care, hospitals, and remote health monitoring.",
+      "image": "assets/healthMonitor.png"
+    }
+  ],
+  "mentors_header": {
+    "title": "Mentors & Leadership",
+    "subtitle": "Guiding innovation with academic excellence and industry experience."
+  },
+  "mentors": [
+    {
+      "name": "Dr. Trilochan Sahu",
+      "role": "Chief Mentor",
+      "image": "assets/T SAHU 1.jpg",
+      "linkedin": "#"
+    },
+    {
+      "name": "Dr. Arun Manohar Gurram",
+      "role": "Faculty Coordinator",
+      "image": "assets/passport pic .jpg",
+      "linkedin": "#"
+    },
+    {
+      "name": "Dr. Soumendra Prasad Rout",
+      "role": "Faculty Co-coorinator",
+      "image": "assets/Dr.Soumendra.jpeg",
+      "linkedin": "#"
+    },
+    {
+      "name": "Dr. Manas Ranjan Sethi",
+      "role": "Tech Guru",
+      "image": "https://ui-avatars.com/api/?name=Manas+Ranjan+Sethi",
+      "linkedin": "#"
+    },
+    {
+      "name": "Madhab Chandra Jena",
+      "role": "Tech Guru",
+      "image": "https://ui-avatars.com/api/?name=Madhab+Chandra+Jena",
+      "linkedin": "#"
+    },
+    {
+      "name": "Dr. Sourav Ghosh",
+      "role": "Tech Guru",
+      "image": "assets/drSourav.jpg",
+      "linkedin": "#"
+    },
+    {
+      "name": "Sanjay Mali",
+      "role": "Tech Guru",
+      "image": "https://ui-avatars.com/api/?name=Sanjay+Mali",
+      "linkedin": "#"
+    }
+  ],
+  "cta": {
+    "title": "Ready to Build, Innovate & Launch?",
+    "desc": "Join the IDEA Lab and transform your ideas into impactful innovations with access to world-class facilities, mentors, and funding pathways.",
+    "bullets": [
+      "Open to Students, Faculty & Startups",
+      "AICTE-Supported Innovation Ecosystem",
+      "Prototype → Product → Startup Journey"
+    ]
+  },
+  "outcomes_header": {
+    "title": "Impact & Outcomes",
+    "subtitle": "Building a strong foundation for innovation, skills, and entrepreneurial thinking."
+  },
+  "outcomes": [
+    {
+      "title": "Hands-on Learning",
+      "desc": "Students actively engaged in multidisciplinary projects and lab-based experimentation."
+    },
+    {
+      "title": "Prototype-Driven Approach",
+      "desc": "Focus on building functional prototypes to validate ideas and solve real-world problems."
+    },
+    {
+      "title": "Emerging Innovation Pipeline",
+      "desc": "Early-stage ideas progressing toward startups, patents, and industry collaborations."
+    },
+    {
+      "title": "Industry Readiness",
+      "desc": "Skill development aligned with industry tools, workflows, and problem-solving practices."
+    }
+  ],
+  "outcomes_footer": "These outcomes represent the early impact of the IDEA Lab, with continuous growth expected as student participation, industry engagement, and innovation maturity increase.",
+  "contact": {
+    "title": "Contact IDEA Lab",
+    "subtitle": "Reach out to collaborate, mentor, or innovate with us.",
+    "address": "Gandhi Institute for Technology(GIFT), Bhubaneswar, Odisha",
+    "coordinator_email": "amanohar@gift.edu.in",
+    "cocoordinator_email": "sprout@gift.edu.in",
+    "coordinator_phone": "+91-7873008162",
+    "cocoordinator_phone": "+91-9937839943",
+    "map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3743.8722056787933!2d85.6713296743159!3d20.222630814979205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19ab347765fb0f%3A0xccb84948b4b2bdf6!2sGIFT%20Autonomous%2C%20Bhubaneswar!5e0!3m2!1sen!2sin!4v1770023873492!5m2!1sen!2sin"
+  }
+}
